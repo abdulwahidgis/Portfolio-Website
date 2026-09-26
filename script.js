@@ -103,6 +103,153 @@ const PROJECTS = [
   }
 ];
 
+// =========================================================
+// Certifications — sourced from the LinkedIn "Licenses &
+// Certifications" export. Image field points to a predictable
+// filename under images/certs/ — drop a matching file in and it
+// renders automatically; until then a styled placeholder shows.
+// =========================================================
+const CERTS = [
+  {
+    img: "images/certs/ML.png",
+    title: "ML for Earth Systems Modelling",
+    issuer: "European Centre for Medium-Range Weather Forecasts (ECMWF)",
+    date: "Issued Sep 2026 · Expires Sep 2026",
+    skills: ["Machine Learning"],
+    desc: "A foundational course covering the use of Machine Learning and AI in Earth System Modeling, including data-driven weather forecasting, model development, datasets, uncertainty, and the role of AI in climate and Earth sciences."
+  },
+  {
+    img: "images/certs/GIS for Climate Action_Certificate.png",
+    title: "GIS for Climate Action",
+    issuer: "Esri",
+    date: "Issued Feb 2026 · Expired Apr 2026",
+    skills: ["GIS Applications", "Climate Change"],
+    desc: "A six-week course focused on using Geographic Information Systems (GIS) to understand and address climate change. Covers analyzing environmental data, visualizing climate impacts, and applying geospatial tools to support sustainable decision-making and real-world solutions."
+  },
+  {
+    img: "images/certs/EOC.jpeg",
+    title: "EOC100",
+    issuer: "Justice Institute of British Columbia",
+    date: "Issued Nov 2025",
+    skills: [],
+    desc: ""
+  },
+  {
+    img: "images/certs/cert-icimod-ml-dl-cryosphere.jpeg",
+    title: "Application of Machine Learning and Deep Learning in Mountain Cryosphere Research",
+    issuer: "ICIMOD",
+    date: "Issued Dec 2025",
+    skills: [],
+    desc: ""
+  },
+  {
+    img: "images\certs\GSP_conference.jpeg",
+    title: "International Conference on Geological Hazards in Pakistan",
+    issuer: "Geological Survey of Pakistan",
+    date: "Issued May 2025",
+    skills: [],
+    desc: ""
+  },
+  {
+    img: "images\certs\nmda.png",
+    title: "Capacity Development in Disaster Management (C2DM)",
+    issuer: "National Disaster Management Authority (NDMA) Pakistan",
+    date: "Issued Oct 2025",
+    skills: [],
+    desc: ""
+  },
+  {
+    img: "images/certs/cert-esri-sar-arcgis-notebooks.png",
+    title: "Processing SAR Data in ArcGIS Notebooks",
+    issuer: "Esri",
+    date: "Issued May 2025",
+    skills: ["Automation", "Satellite Image Processing"],
+    desc: "Learned how to process and analyze Synthetic Aperture Radar (SAR) data using ArcGIS Notebooks. Gained hands-on experience with Python scripting for automating geospatial workflows and enhancing SAR data interpretation in remote sensing projects."
+  },
+  {
+    img: "images/certs/cert-esri-getting-started.png",
+    title: "Getting Started with GIS",
+    issuer: "Esri",
+    date: "Issued Jul 2019",
+    skills: ["Geographic Information Systems (GIS)", "ArcGIS Pro"],
+    desc: "A beginner-friendly introduction to the essential concepts and tools of GIS — creating, analyzing and visualizing spatial data for various applications."
+  },
+  {
+    img: "images/certs/intro_RemoteSensing.jpg",
+    title: "Introduction to Remote Sensing",
+    issuer: "GeoUniversity",
+    date: "Issued Nov 2019",
+    skills: ["Remote Sensing", "Remote Sensing Applications"],
+    desc: "Covers the fundamental principles of remote sensing, including the collection, processing and interpretation of data captured by satellites and other sensors to observe and analyze the Earth's surface."
+  },
+  {
+    img: "images/certs/cert-geouni-eos-remote-sensing.jpg",
+    title: "Remote Sensing and Satellite Image Processing with EOS Platform",
+    issuer: "GeoUniversity",
+    date: "Issued Nov 2020",
+    skills: [],
+    desc: "An introduction to remote sensing principles using the EOS Platform, focused on processing, analyzing and interpreting satellite imagery for various applications."
+  },
+  {
+    img: "images/certs/cert-geouni-latex.jpg",
+    title: "Introduction to LaTeX",
+    issuer: "GeoUniversity",
+    date: "Issued Sep 2024",
+    skills: ["LaTeX", "Overleaf"],
+    desc: "Covers LaTeX basics, integrating tables/figures/graphs, managing references and bibliographies with BibTeX/BibLaTeX, building presentations with the Beamer class, and using Overleaf for collaborative document creation."
+  },
+  {
+    img: "images/certs/cert-unuinweh-flood-mapping.jpg",
+    title: "Active and Passive Satellite Data Analysis Using Cloud Computing for Surface Water / Flood Mapping",
+    issuer: "United Nations University Institute for Water, Environment and Health (UNU-INWEH)",
+    date: "Issued Mar 2023",
+    skills: ["Flood Risk", "Flood Management"],
+    desc: "An introduction to the Earth Engine Code Editor platform, covering programming concepts for processing Optical and SAR remote sensing datasets for flood inundation mapping, change detection and damage assessment — including spectral water indices, time-series analysis of flooded areas, SAR backscatter thresholds, and flood frequency analysis."
+  },
+  {
+    img: "images/certs/cert-unuinweh-gee-chatgpt.jpg",
+    title: "Introduction to Geospatial Data Analysis with ChatGPT and Google Earth Engine",
+    issuer: "United Nations University Institute for Water, Environment and Health (UNU-INWEH)",
+    date: "Issued Jan 2024",
+    skills: ["Google Earth Engine", "ChatGPT"],
+    desc: "An introduction to the Earth Engine Code Editor platform combined with ChatGPT for geospatial data analysis workflows."
+  }
+];
+
+function initials(str){
+  return str.replace(/\(.*?\)/g, "").trim().split(/\s+/).filter(w=>/[A-Za-z]/.test(w)).slice(0,2).map(w=>w[0]).join("").toUpperCase();
+}
+
+function renderCerts(){
+  const el = document.getElementById("certGrid");
+  if(!el) return;
+  el.innerHTML = CERTS.map((c, i) => `
+    <div class="cert-card">
+      <div class="cert-thumb">
+        <img src="${c.img}" alt="${c.title}" loading="lazy" onerror="this.classList.add('cert-img-hidden'); this.parentElement.querySelector('.cert-badge').style.display='flex';">
+        <div class="cert-badge" style="display:none;">${initials(c.issuer)}</div>
+      </div>
+      <div class="cert-body">
+        <div class="cert-issuer-row"><span class="cert-issuer">${c.issuer}</span><span>${c.date}</span></div>
+        <div class="cert-title">${c.title}</div>
+        ${c.skills.length ? `<div class="cert-skills">${c.skills.map(s=>`<span>${s}</span>`).join("")}</div>` : ""}
+        <div class="cert-toggle" data-idx="${i}"><span class="arrow">›</span> Details</div>
+        <div class="cert-desc" id="certDesc${i}">
+          ${c.desc ? `<p>${c.desc}</p>` : `<p class="cert-desc-empty">No further details listed for this credential.</p>`}
+        </div>
+      </div>
+    </div>
+  `).join("");
+
+  el.querySelectorAll(".cert-toggle").forEach(btn=>{
+    btn.addEventListener("click", ()=>{
+      btn.classList.toggle("open");
+      document.getElementById("certDesc"+btn.dataset.idx).classList.toggle("open");
+    });
+  });
+}
+renderCerts();
+
 // ---------- project cards render (with tilt handlers) ----------
 const grid = document.getElementById("projectGrid");
 function attachTilt(card){
@@ -320,7 +467,12 @@ sections.forEach(s=> s && navObs.observe(s));
 
 // ---------- back to top ----------
 const totop = document.getElementById("totop");
-window.addEventListener("scroll", ()=>{ totop.classList.toggle("show", window.scrollY > 700); });
+const whatsappFab = document.querySelector(".whatsapp-fab");
+window.addEventListener("scroll", ()=>{
+  const past = window.scrollY > 700;
+  totop.classList.toggle("show", past);
+  if(whatsappFab) whatsappFab.classList.toggle("show", past);
+});
 totop.addEventListener("click", ()=> window.scrollTo({top:0, behavior:"smooth"}));
 
 // ---------- typed rotating role line ----------
@@ -337,6 +489,57 @@ function cycleRole(){
 }
 typedEl.style.transition = "opacity .35s ease";
 setInterval(cycleRole, 3200);
+
+// ---------- constellation network background (satellite/sensor motif) ----------
+(function initConstellation(){
+  const canvas = document.getElementById("constellation");
+  if(!canvas) return;
+  const ctx = canvas.getContext("2d");
+  const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let w, h, nodes;
+
+  function resize(){
+    const hero = canvas.closest(".hero");
+    w = canvas.width = hero.offsetWidth;
+    h = canvas.height = hero.offsetHeight;
+    const count = Math.max(18, Math.min(46, Math.round((w*h)/38000)));
+    nodes = Array.from({length: count}, ()=>({
+      x: Math.random()*w, y: Math.random()*h,
+      vx: (Math.random()-0.5)*0.18, vy: (Math.random()-0.5)*0.18,
+      r: Math.random()*1.6 + 0.6
+    }));
+  }
+
+  function frame(){
+    ctx.clearRect(0,0,w,h);
+    nodes.forEach(n=>{
+      n.x += n.vx; n.y += n.vy;
+      if(n.x < 0 || n.x > w) n.vx *= -1;
+      if(n.y < 0 || n.y > h) n.vy *= -1;
+    });
+    for(let i=0;i<nodes.length;i++){
+      for(let j=i+1;j<nodes.length;j++){
+        const dx = nodes[i].x-nodes[j].x, dy = nodes[i].y-nodes[j].y;
+        const dist = Math.sqrt(dx*dx+dy*dy);
+        if(dist < 140){
+          ctx.strokeStyle = `rgba(78,136,166,${(1-dist/140)*0.28})`;
+          ctx.lineWidth = 1;
+          ctx.beginPath(); ctx.moveTo(nodes[i].x, nodes[i].y); ctx.lineTo(nodes[j].x, nodes[j].y); ctx.stroke();
+        }
+      }
+    }
+    nodes.forEach(n=>{
+      ctx.beginPath(); ctx.arc(n.x, n.y, n.r, 0, Math.PI*2);
+      ctx.fillStyle = "rgba(232,163,61,0.55)";
+      ctx.fill();
+    });
+    if(!reduceMotion) requestAnimationFrame(frame);
+  }
+
+  resize();
+  window.addEventListener("resize", resize);
+  frame();
+})();
 
 // ---------- footer year ----------
 document.getElementById("year").textContent = new Date().getFullYear();
@@ -386,6 +589,7 @@ const SECTION_ORDER = [
   {id:"skills-section", label:"SKILLS"},
   {id:"resume-section", label:"EXPERIENCE"},
   {id:"education-section", label:"EDUCATION"},
+  {id:"certifications-section", label:"CERTS"},
   {id:"contact-section", label:"CONTACT"}
 ];
 if(sectionIndexEl){

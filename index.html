@@ -19,7 +19,7 @@
 <body>
 
 <div class="progress-rail"><div class="progress-fill" id="progressFill"></div></div>
-<div class="section-index" id="sectionIndex"><b>01</b> / 08 — HOME</div>
+<div class="section-index" id="sectionIndex"><b>01</b> / 09 — HOME</div>
 
 <!-- ============ NAV ============ -->
 <nav class="nav" id="siteNav">
@@ -31,6 +31,7 @@
       <li><a href="#skills-section">Skills</a></li>
       <li><a href="#project-section">Projects</a></li>
       <li><a href="#resume-section">Experience</a></li>
+      <li><a href="#certifications-section">Certs</a></li>
       <li><a href="#contact-section">Contact</a></li>
       <li><a href="#" class="nav-cta" id="navResumeBtn">Request CV</a></li>
     </ul>
@@ -39,27 +40,72 @@
 
 <!-- ============ HERO ============ -->
 <header class="hero" id="top">
+  <canvas id="constellation" class="constellation-canvas"></canvas>
   <div class="scan-sweep"></div>
   <div class="hero-inner wrap">
-    <div class="hero-coord hero-intro d1">HKH REGION · 35.85° N, 71.79° E · CHITRAL, KHYBER PAKHTUNKHWA, PAKISTAN</div>
+
+    <div class="hero-topbar hero-intro d1">
+      <div class="hero-coord">HKH REGION · 35.85° N, 71.79° E · CHITRAL, PAKISTAN</div>
+      <div class="status-pill"><span class="pulse-dot"></span> AVAILABLE FOR PROJECTS</div>
+    </div>
+
     <div class="hero-grid">
       <div>
-        <div class="eyebrow hero-intro d2">GIS &amp; Remote Sensing Professional</div>
+        <div class="eyebrow hero-intro d2">GIS OFFICER · FIELD + REMOTE</div>
         <h1 class="hero-intro d2">Reading the terrain<br>before the <em>flood</em> arrives.</h1>
         <div class="hero-role hero-intro d3"><span id="typedRole">GIS Officer, Aga Khan Agency for Habitat</span><span class="cursor"></span></div>
-        <p class="hero-statement hero-intro d3">I turn satellite imagery, elevation data and field inventories into hazard maps and risk assessments — mapping glacial lakes, floods, landslides and settlement exposure across Pakistan's high mountain valleys, so communities and planners can see risk before it becomes disaster.</p>
+        <p class="hero-statement hero-intro d3">I turn satellite imagery, elevation data and field inventories into hazard maps and risk assessments — mapping glacial lakes, floods, landslides and settlement exposure across Pakistan's high mountain valleys.</p>
+
+        <div class="hero-info-split hero-intro d4">
+          <div class="split-card">
+            <div class="split-cell">
+              <span class="split-label">Experience</span>
+              <span class="split-value">3 Yrs 3 Mo</span>
+            </div>
+            <div class="split-cell accent">
+              <span class="split-label">Based In</span>
+              <span class="split-value">Chitral, PK</span>
+            </div>
+          </div>
+          <div class="split-card">
+            <div class="split-cell">
+              <span class="split-label">Focus</span>
+              <span class="split-value">GLOF · Hazard Risk</span>
+            </div>
+            <div class="split-cell">
+              <span class="split-label">Open To</span>
+              <span class="split-value">Consulting · Research</span>
+            </div>
+          </div>
+        </div>
+
         <div class="hero-ctas hero-intro d4">
           <a href="#project-section" class="btn btn-primary">View Projects</a>
           <a href="#" class="btn btn-ghost" id="heroResumeBtn">Request CV</a>
         </div>
+
+        <div class="tool-row hero-intro d5">
+          <span class="tool-row-label"><span class="diamond"></span>Core Tools</span>
+          <div class="tool-chips">
+            <div class="tool-chip"><div class="tool-icon" style="--tc:var(--glacier);">GE</div><span>Google Earth Engine</span></div>
+            <div class="tool-chip"><div class="tool-icon" style="--tc:var(--clay-soft);">Ar</div><span>ArcGIS Pro</span></div>
+            <div class="tool-chip"><div class="tool-icon" style="--tc:var(--moss);">Qg</div><span>QGIS</span></div>
+            <div class="tool-chip"><div class="tool-icon" style="--tc:var(--sand);">Py</div><span>Python</span></div>
+          </div>
+        </div>
       </div>
-      <div class="hero-panel hero-intro d5">
-        <div class="row"><span>Role</span><span>GIS Officer</span></div>
-        <div class="row"><span>Focus</span><span>GLOF · Flood · Landslide Risk</span></div>
-        <div class="row"><span>Experience</span><span>3 Yrs 3 Mo</span></div>
-        <div class="row"><span>Region</span><span>Hindu Kush–Karakoram–Himalaya</span></div>
-        <div class="row"><span>Based in</span><span>Chitral, Pakistan</span></div>
-        <div class="row"><span>Open to</span><span>Consulting · Research · Freelance</span></div>
+
+      <div class="hero-panel glass-card hero-intro d5">
+        <div class="avatar-ring">
+          <img src="images/about-me-ring.jpg" alt="Abdul Wahid">
+        </div>
+        <div class="panel-name-label">GIS &amp; REMOTE SENSING</div>
+        <h3 class="panel-name">Abdul Wahid</h3>
+        <p class="panel-role">GIS Officer <span class="dot-sep">·</span> AKAH</p>
+        <div class="panel-divider"></div>
+        <div class="panel-row"><span>Role</span><span>GIS Officer</span></div>
+        <div class="panel-row"><span>Region</span><span>Hindu Kush–Karakoram–Himalaya</span></div>
+        <div class="panel-row"><span>Languages</span><span>English · Urdu · Hindi</span></div>
       </div>
     </div>
   </div>
@@ -356,6 +402,18 @@
   </div>
 </section>
 
+<!-- ============ CERTIFICATIONS ============ -->
+<section class="band-alt" id="certifications-section">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Credentials</div>
+      <h2>Certifications &amp; Training</h2>
+      <p>Courses and training completed across GIS, remote sensing, machine learning and disaster management. Click a card for the full description.</p>
+    </div>
+    <div class="cert-grid reveal" id="certGrid"></div>
+  </div>
+</section>
+
 <!-- ============ STATS ============ -->
 <section class="band-ink" style="padding-top:0;" id="stats-section">
   <div class="wrap">
@@ -429,6 +487,11 @@
 </footer>
 
 <button class="totop" id="totop" aria-label="Back to top">↑</button>
+
+<a href="https://wa.me/923409854648" target="_blank" rel="noopener" class="whatsapp-fab" aria-label="Message on WhatsApp">
+  <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12.001 2C6.478 2 2 6.477 2 12c0 1.917.537 3.71 1.47 5.235L2 22l4.897-1.446A9.945 9.945 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18.06a8.03 8.03 0 01-4.29-1.235l-.308-.19-3.207.947.955-3.153-.202-.32A8.038 8.038 0 013.94 12c0-4.44 3.62-8.06 8.06-8.06 4.44 0 8.06 3.62 8.06 8.06 0 4.44-3.62 8.06-8.06 8.06z"/></svg>
+  <span class="whatsapp-fab-text">+92 340 9854648</span>
+</a>
 
 <script src="script.js"></script>
 </body>
