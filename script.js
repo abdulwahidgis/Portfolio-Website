@@ -111,7 +111,7 @@ const PROJECTS = [
 // =========================================================
 const CERTS = [
   {
-    img: "images/certs/ML.png",
+    img: "images/ML.png",
     title: "ML for Earth Systems Modelling",
     issuer: "European Centre for Medium-Range Weather Forecasts (ECMWF)",
     date: "Issued Sep 2026 · Expires Sep 2026",
@@ -119,7 +119,7 @@ const CERTS = [
     desc: "A foundational course covering the use of Machine Learning and AI in Earth System Modeling, including data-driven weather forecasting, model development, datasets, uncertainty, and the role of AI in climate and Earth sciences."
   },
   {
-    img: "images/certs/GIS for Climate Action_Certificate.png",
+    img: "images/GIS for Climate Action_Certificate.png",
     title: "GIS for Climate Action",
     issuer: "Esri",
     date: "Issued Feb 2026 · Expired Apr 2026",
@@ -127,7 +127,7 @@ const CERTS = [
     desc: "A six-week course focused on using Geographic Information Systems (GIS) to understand and address climate change. Covers analyzing environmental data, visualizing climate impacts, and applying geospatial tools to support sustainable decision-making and real-world solutions."
   },
   {
-    img: "images/certs/EOC.jpeg",
+    img: "images/EOC.jpeg",
     title: "EOC100",
     issuer: "Justice Institute of British Columbia",
     date: "Issued Nov 2025",
@@ -135,7 +135,7 @@ const CERTS = [
     desc: ""
   },
   {
-    img: "images/certs/cert-icimod-ml-dl-cryosphere.jpeg",
+    img: "images/cert-icimod-ml-dl-cryosphere.jpeg",
     title: "Application of Machine Learning and Deep Learning in Mountain Cryosphere Research",
     issuer: "ICIMOD",
     date: "Issued Dec 2025",
@@ -143,7 +143,7 @@ const CERTS = [
     desc: ""
   },
   {
-    img: "images\certs\GSP_conference.jpeg",
+    img: "images\GSP_conference.jpeg",
     title: "International Conference on Geological Hazards in Pakistan",
     issuer: "Geological Survey of Pakistan",
     date: "Issued May 2025",
@@ -151,7 +151,7 @@ const CERTS = [
     desc: ""
   },
   {
-    img: "images\certs\nmda.png",
+    img: "images\nmda.png",
     title: "Capacity Development in Disaster Management (C2DM)",
     issuer: "National Disaster Management Authority (NDMA) Pakistan",
     date: "Issued Oct 2025",
@@ -159,7 +159,7 @@ const CERTS = [
     desc: ""
   },
   {
-    img: "images/certs/cert-esri-sar-arcgis-notebooks.png",
+    img: "images/cert-esri-sar-arcgis-notebooks.png",
     title: "Processing SAR Data in ArcGIS Notebooks",
     issuer: "Esri",
     date: "Issued May 2025",
@@ -167,7 +167,7 @@ const CERTS = [
     desc: "Learned how to process and analyze Synthetic Aperture Radar (SAR) data using ArcGIS Notebooks. Gained hands-on experience with Python scripting for automating geospatial workflows and enhancing SAR data interpretation in remote sensing projects."
   },
   {
-    img: "images/certs/cert-esri-getting-started.png",
+    img: "images/cert-esri-getting-started.png",
     title: "Getting Started with GIS",
     issuer: "Esri",
     date: "Issued Jul 2019",
@@ -175,7 +175,7 @@ const CERTS = [
     desc: "A beginner-friendly introduction to the essential concepts and tools of GIS — creating, analyzing and visualizing spatial data for various applications."
   },
   {
-    img: "images/certs/intro_RemoteSensing.jpg",
+    img: "images/intro_RemoteSensing.jpg",
     title: "Introduction to Remote Sensing",
     issuer: "GeoUniversity",
     date: "Issued Nov 2019",
@@ -183,7 +183,7 @@ const CERTS = [
     desc: "Covers the fundamental principles of remote sensing, including the collection, processing and interpretation of data captured by satellites and other sensors to observe and analyze the Earth's surface."
   },
   {
-    img: "images/certs/cert-geouni-eos-remote-sensing.jpg",
+    img: "images/cert-geouni-eos-remote-sensing.jpg",
     title: "Remote Sensing and Satellite Image Processing with EOS Platform",
     issuer: "GeoUniversity",
     date: "Issued Nov 2020",
@@ -191,7 +191,7 @@ const CERTS = [
     desc: "An introduction to remote sensing principles using the EOS Platform, focused on processing, analyzing and interpreting satellite imagery for various applications."
   },
   {
-    img: "images/certs/cert-geouni-latex.jpg",
+    img: "images/cert-geouni-latex.jpg",
     title: "Introduction to LaTeX",
     issuer: "GeoUniversity",
     date: "Issued Sep 2024",
@@ -199,7 +199,7 @@ const CERTS = [
     desc: "Covers LaTeX basics, integrating tables/figures/graphs, managing references and bibliographies with BibTeX/BibLaTeX, building presentations with the Beamer class, and using Overleaf for collaborative document creation."
   },
   {
-    img: "images/certs/cert-unuinweh-flood-mapping.jpg",
+    img: "images/cert-unuinweh-flood-mapping.jpg",
     title: "Active and Passive Satellite Data Analysis Using Cloud Computing for Surface Water / Flood Mapping",
     issuer: "United Nations University Institute for Water, Environment and Health (UNU-INWEH)",
     date: "Issued Mar 2023",
@@ -207,7 +207,7 @@ const CERTS = [
     desc: "An introduction to the Earth Engine Code Editor platform, covering programming concepts for processing Optical and SAR remote sensing datasets for flood inundation mapping, change detection and damage assessment — including spectral water indices, time-series analysis of flooded areas, SAR backscatter thresholds, and flood frequency analysis."
   },
   {
-    img: "images/certs/cert-unuinweh-gee-chatgpt.jpg",
+    img: "images/cert-unuinweh-gee-chatgpt.jpg",
     title: "Introduction to Geospatial Data Analysis with ChatGPT and Google Earth Engine",
     issuer: "United Nations University Institute for Water, Environment and Health (UNU-INWEH)",
     date: "Issued Jan 2024",
